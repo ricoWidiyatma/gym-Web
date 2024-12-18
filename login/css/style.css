@@ -12,7 +12,7 @@
 
 .navbar {
     padding: 20px;
-    background: #2B547E;
+    background: #6b615c;
 }
 
 .navbar .navbar-toggler {
@@ -39,13 +39,13 @@
 
 .navbar .navbar-brand i {
     font-size: 25px;
-    background: #088F8F;
+    background: #6b615c;
     border-radius: 50%;
     padding: 10px 15px;
 }
 
 .navbar .collapse {
-    background: #2B547E;
+    background: #6b615c;
 }
 
 .navbar .dropdown-menu{
@@ -53,13 +53,13 @@
 }
 
 .navbar .dropdown-menu li a{
-    color: #1c456d;
+    color: #6b615c;
     font-size: 15px;
 }
 
 .navbar ul li .bi{
     background: #fff;
-    color: #1c456d;
+    color: #6b615c;
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 50%;
@@ -74,13 +74,13 @@
 }
 
 .navbar ul li a:hover {
-    color: #FFA500;
+    color: #6b615c;
 }
 
 .name{
     font-size: 30px;
-    background-color: #2B547E;
-    color: #FFA500;
+    background-color: #d47e1b;
+    color: #504d20;
     padding: 50px;
 }
 
@@ -88,7 +88,7 @@
 
 .hero-section {
     padding: 20px;
-    background: #2B547E;
+    background: #d47e1b;
 }
 
 .hero-section .text-content {
@@ -117,7 +117,7 @@
 
 .hero-section button:hover {
     border: 1px solid #FFA500;
-    background: #2B547E;
+    background: #d47e1b;
 }
 
 .hero-section button a {
@@ -166,7 +166,7 @@
 
 
 .services-section .services .card:hover {
-    background-color: #2B547E;
+    background-color: #d47e1b;
     color: #fff;
     transform: scale(1.1);
 }
@@ -215,7 +215,7 @@
     margin-top: 20px;
     font-weight: bold;
     margin-left: 30px;
-    color: #1c456d;
+    color: #d47e1b;
 }
 
 .services-section .text-content p {
@@ -231,15 +231,15 @@
     margin-top: 20px;
     border-radius: 30px;
     color: #fff;
-    background-color: #2B547E;
+    background-color: #d47e1b;
     height: 50px;
     width: 170px;
 }
 
 .services-section .text-content button:hover {
     background-color: #fff;
-    border: 2px solid #2B547E;
-    color: #2B547E;
+    border: 2px solid #d47e1b;
+    color: #d47e1b;
 }
 
 /* about section  */
@@ -274,7 +274,7 @@
     margin-top: 20px;
     font-weight: bold;
     margin-left: 30px;
-    color: #1c456d;
+    color: #d47e1b;
 }
 
 .about-section .text-content p {
@@ -291,7 +291,7 @@
     border-radius: 30px;
     color: #fff;
     border: none;
-    background-color: #2B547E;
+    background-color: #d47e1b;
     height: 50px;
     width: 170px;
     text-transform: capitalize;
@@ -299,14 +299,14 @@
 
 .about-section .text-content button:hover {
     background-color: #fff;
-    border: 2px solid #2B547E;
-    color: #2B547E;
+    border: 2px solid #d47e1b;
+    color: #d47e1b;
 }
 
 /* project section  */
 
 .project-section {
-    background-color: #088F8F;
+    background-color: #d47e1b;
     padding: 90px;
     /* height: 100vh; */
 }
@@ -353,7 +353,7 @@
 
 .project-section .project .card h4 {
     font-size: 20px;
-    color: #1c456d;
+    color: #d47e1b;
     font-weight: bold;
     margin-top: 20px;
 }
@@ -370,7 +370,7 @@
     border-radius: 30px;
     color: #fff;
     border: none;
-    background-color: #088F8F;
+    background-color: #d47e1b;
     height: 40px;
     width: 120px;
     text-transform: capitalize;
@@ -378,8 +378,8 @@
 
 .project-section .project .card button:hover {
     background-color: #fff;
-    border: 2px solid #088F8F;
-    color: #088F8F;
+    border: 2px solid #d47e1b;
+    color: #d47e1b;
 }
 
 /* contact section  */
@@ -395,7 +395,7 @@
     text-transform: capitalize;
     font-size: 50px;
     font-weight: bold;
-    color: #1c456d;
+    color: #d47e1b;
     margin-bottom: 100px;
 }
 
@@ -411,7 +411,7 @@
 }
 
 .contact-section .info-box .bi {
-    background: #088F8F;
+    background: #d47e1b;
     border-radius: 55%;
     padding: 15px 18px;
     color: #fff;
@@ -442,7 +442,7 @@
 
 .contact-section .info-box:hover .bi {
     background: #fff;
-    color: #088F8F;
+    color: #d47e1b;
     font-size: 25px;
     text-align: center;
 }
@@ -456,7 +456,7 @@
     margin-top: 10px;
     border: none;
     background: #f1f1f1;
-    color: #1c456d;
+    color: #d47e1b;
     padding: 15px;
     border-radius: 10px;
 }
@@ -466,7 +466,7 @@
     border-radius: 30px;
     color: #fff;
     border: none;
-    background-color: #088F8F;
+    background-color: #d47e1b;
     height: 50px;
     width: 170px;
     text-transform: capitalize;
@@ -474,15 +474,21 @@
 
 .contact-section form button:hover {
     background-color: #fff;
-    border: 2px solid #088F8F;
-    color: #088F8F;
+    border: 2px solid #d47e1b;
+    color: #d47e1b;
 }
+/* Membership section */
+
+.package-section{
+    background-color: #945c18;
+}
+
 
 /* footer section  */
 
 footer {
     padding: 40px;
-    background: #1c456d;
+    background: #6b615c;
 }
 
 footer .logo {
@@ -493,7 +499,7 @@ footer .logo {
 
 footer .logo i {
     font-size: 25px;
-    background: #088F8F;
+    background: #d4c81b;
     border-radius: 50%;
     padding: 10px 15px;
 }
