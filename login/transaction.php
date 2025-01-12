@@ -1,9 +1,8 @@
 <?php
-// Koneksi ke database
 $servername = "localhost";
-$username = "root"; // Ubah sesuai dengan username database Anda
-$password = ""; // Ubah sesuai dengan password database Anda
-$dbname = "gatot"; // Nama database Anda
+$username = "root"; 
+$password = ""; 
+$dbname = "gatot"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -57,11 +56,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gym Membership Registration</title>
   <style>
-    /* General Styling */
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #1A1A1A; /* Warna latar gelap */
-      color: #E5E5E5; /* Warna teks abu terang */
+      background-color: #1A1A1A;
+      color: #E5E5E5;
       margin: 0;
       padding: 0;
       display: flex;
@@ -74,107 +72,104 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .form-container {
       width: 100%;
       max-width: 600px;
-      background-color: #262626; /* Warna abu gelap untuk container */
+      background-color: #262626;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8); /* Efek bayangan dramatis */
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
     }
 
-    /* Headings */
     h1 {
-      color: #FF6A3D; /* Oranye terang untuk aksen */
+      color: #FF6A3D;
       font-size: 2rem;
       text-align: center;
       margin-bottom: 25px;
     }
 
-    /* Form Elements */
     form {
       display: flex;
-      flex-wrap: wrap; /* Membungkus elemen form */
+      flex-wrap: wrap;
       gap: 15px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      flex: 1 1 calc(50% - 10px); /* Dua kolom dengan jarak antar elemen */
+      flex: 1 1 calc(50% - 10px);
     }
 
     .form-group.full-width {
-      flex: 1 1 100%; /* Kolom penuh untuk elemen tertentu */
+      flex: 1 1 100%;
     }
 
     label {
       margin-bottom: 8px;
       font-weight: 500;
-      color: #B3B3B3; /* Warna teks abu-abu */
+      color: #B3B3B3;
     }
 
     input, select {
       width: 100%;
       padding: 12px;
-      border: 1px solid #444; /* Border halus */
+      border: 1px solid #444;
       border-radius: 8px;
-      background-color: #333333; /* Warna latar elemen */
-      color: #E5E5E5; /* Warna teks */
+      background-color: #333333;
+      color: #E5E5E5;
       font-size: 1rem;
       transition: all 0.3s ease;
-      box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
+      box-sizing: border-box;
     }
 
     input:focus, select:focus {
-      border-color: #FF6A3D; /* Warna aksen oranye saat fokus */
+      border-color: #FF6A3D;
       outline: none;
       box-shadow: 0px 0px 10px rgba(255, 106, 61, 0.7);
     }
 
-    /* Price Display */
+    .error-message {
+      color: red;
+      font-size: 0.85rem;
+      margin-top: 5px;
+      display: none;
+    }
+
     .price-display {
       font-size: 1.4rem;
       font-weight: bold;
-      color: #FF6A3D; /* Warna aksen untuk harga */
+      color: #FF6A3D;
       text-align: center;
       border: 1px solid #FF6A3D;
       border-radius: 8px;
       padding: 10px;
-      background-color: #262626; /* Warna latar */
+      background-color: #262626;
       margin-top: 10px;
     }
 
-    /* Agreement Section */
     .agreement {
       display: flex;
-      align-items: flex-start; /* Posisi checkbox di bagian atas label */
-      gap: 10px; /* Jarak antara checkbox dan teks */
-      font-size: 0.9rem; /* Ukuran teks */
-      color: #94A3B8; /* Warna teks abu-abu terang */
-      margin-top: 10px; /* Tambahkan jarak di atas checkbox */
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #94A3B8;
+      margin-top: 10px;
     }
 
     .agreement input[type="checkbox"] {
-      margin: 0; /* Hilangkan margin default pada checkbox */
+      margin: 0;
       width: 18px;
-      height: 18px; /* Ukuran checkbox */
-      border-radius: 4px; /* Membuat sudut checkbox agak membulat */
-      border: 1px solid #10B981; /* Warna border checkbox */
-      background-color: #1E293B; /* Warna latar checkbox */
+      height: 18px;
+      border-radius: 4px;
+      border: 1px solid #10B981;
+      background-color: #1E293B;
       cursor: pointer;
     }
 
     .agreement input[type="checkbox"]:checked {
-      background-color: #10B981; /* Warna hijau saat dicentang */
+      background-color: #10B981;
       border-color: #10B981;
     }
 
-    .agreement label {
-      cursor: pointer; /* Memastikan label dapat diklik */
-      line-height: 1.5; /* Menyesuaikan tinggi teks agar sejajar dengan checkbox */
-      margin: 0; /* Hilangkan margin default pada label */
-    }
-
     .agreement a {
-      color: #38BDF8; /* Warna biru untuk link */
+      color: #38BDF8;
       text-decoration: none;
       font-weight: bold;
     }
@@ -183,7 +178,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       text-decoration: underline;
     }
 
-    /* Buttons */
     button {
       width: 100%;
       padding: 12px;
@@ -196,17 +190,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     .submit-btn {
       background-color: #FF6A3D;
-      color: #1A1A1A; /* Warna teks hitam */
+      color: #1A1A1A;
       border: none;
     }
 
     .submit-btn:hover {
-      background-color: #E65C2C; /* Oranye lebih gelap saat hover */
+      background-color: #E65C2C;
       transform: scale(1.05);
     }
 
     .submit-btn:active {
-      background-color: #CC4D26; /* Oranye redup saat klik */
+      background-color: #CC4D26;
       transform: scale(0.98);
     }
   </style>
@@ -217,11 +211,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST">
       <div class="form-group">
         <label for="first-name">First Name *</label>
-        <input type="text" id="first-name" name="first-name" required>
+        <input type="text" id="first-name" name="first-name" required oninput="validateFirstName()">
+        <div id="first-name-error" class="error-message">First Name must contain only letters.</div>
       </div>
       <div class="form-group">
         <label for="last-name">Last Name *</label>
-        <input type="text" id="last-name" name="last-name" required>
+        <input type="text" id="last-name" name="last-name" required oninput="validateLastName()">
+        <div id="last-name-error" class="error-message">Last Name must contain only letters.</div>
       </div>
       <div class="form-group">
         <label for="dob">Date of Birth *</label>
@@ -237,7 +233,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
       <div class="form-group">
         <label for="phone">Phone Number *</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="text" id="phone" name="phone" required oninput="validatePhone()">
+        <div id="phone-error" class="error-message">Phone Number must contain only numbers.</div>
       </div>
       <div class="form-group full-width">
         <label for="membership-duration">Membership Duration *</label>
@@ -249,7 +246,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <option value="12">1 Year</option>
         </select>
       </div>
-      <!-- Display Price -->
       <div id="price-display" class="price-display">Total Price: Rp. 0</div>
 
       <div class="form-group full-width agreement">
@@ -266,7 +262,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       const priceDisplay = document.getElementById("price-display");
       let price = 0;
 
-      // Hitung harga berdasarkan durasi keanggotaan
       switch (duration) {
         case "1":
           price = 100000;
@@ -284,11 +279,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           price = 0;
       }
 
-      // Perbarui elemen HTML untuk menampilkan harga
       priceDisplay.innerText = `Total Price: Rp. ${price.toLocaleString()}`;
     }
 
-    // Jalankan calculatePrice() jika halaman dimuat ulang
+    function validateFirstName() {
+      const firstName = document.getElementById("first-name").value;
+      const firstNameError = document.getElementById("first-name-error");
+      const namePattern = /^[a-zA-Z]*$/;
+
+      if (!namePattern.test(firstName)) {
+        firstNameError.style.display = "block";
+        document.getElementById("first-name").value = firstName.replace(/[^a-zA-Z]/g, "");
+      } else {
+        firstNameError.style.display = "none";
+      }
+    }
+
+    function validateLastName() {
+      const lastName = document.getElementById("last-name").value;
+      const lastNameError = document.getElementById("last-name-error");
+      const namePattern = /^[a-zA-Z]*$/;
+
+      if (!namePattern.test(lastName)) {
+        lastNameError.style.display = "block";
+        document.getElementById("last-name").value = lastName.replace(/[^a-zA-Z]/g, "");
+      } else {
+        lastNameError.style.display = "none";
+      }
+    }
+
+    function validatePhone() {
+      const phone = document.getElementById("phone").value;
+      const phoneError = document.getElementById("phone-error");
+      const phonePattern = /^[0-9]*$/;
+
+      if (!phonePattern.test(phone)) {
+        phoneError.style.display = "block";
+        document.getElementById("phone").value = phone.replace(/\D/g, "");
+      } else {
+        phoneError.style.display = "none";
+      }
+    }
+
     calculatePrice();
   </script>
 </body>
