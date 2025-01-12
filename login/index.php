@@ -29,16 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">about us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">projects</a>
+                            <a class="nav-link" href="#about-us">about us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">contact</a>
@@ -62,7 +53,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12 text-content">
                     <h1>Welcome to Gatot-Gym</h1>
-                    <p> Kehidupan yang layak di dasari dari tubuh yang sehat juga
+                    <p> Stay Healthy and Always Feeling Strong
                     </p>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12">
@@ -73,7 +64,26 @@
         </div>
     </section>
 
-    
+ <!-- about us  -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12"id="about-us">
+            <h1>About Us</h1>
+            <p>Gatot Gym is a fitness center that provides various facilities and equipment to help you achieve your fitness goals. We have a team of experienced and friendly trainers.</p>
+            <p>We offer a range of fitness programs, including weight training, cardio, and yoga. We also have facilities such as changing rooms, showers, and ample parking.</p>
+            <p>At Gatot Gym, we are committed to helping you achieve your fitness goals and improving your quality of life. We believe that fitness is the key to a healthy and happy life.</p>
+            <p>Address : Yogyakarta, Bantul, xxx, jl.xxx no.xxx</p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12" id="contact">
+            <h1>Contact</h1>
+            <ul>
+                <li><i class="fa fa-phone"></i> Phone Number: 0812-345-678-90</li>
+                <li><i class="fa fa-whatsapp"></i> WhatsApp Number: 0812-345-678-90</li>
+                <li><i class="fa fa-instagram"></i> Instagram: @gatotgym</li>
+            </ul>
+        </div>
+    </div>
+</div>
     <!-- footer section  -->
 
     <footer>
